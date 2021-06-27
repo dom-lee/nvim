@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/dongmyeong/.config/nvim/colors'
+let g:netrw_dirhist_5='/Users/dongmyeong'
+let g:netrw_dirhist_4='/Users/dongmyeong/.vim'
+let g:netrw_dirhist_3='/Users/dongmyeong/.config/nvim/plugged/nerdcommenter/plugin'
+let g:netrw_dirhist_2='/Users/dongmyeong/projects/wecode/22-Westagram-backend/students/dongmyeong/users'
+let g:netrw_dirhist_1='/Users/dongmyeong/projects/wecode/22-Westagram-backend/students/dongmyeong'
+let g:netrw_dirhist_0='/Users/dongmyeong/projects/wecode/22-Westagram-backend/students/dongmyeong/users'
+let g:netrw_dirhist_9='/Users/dongmyeong/projects/wecode/22-Westagram-backend/students/dongmyeong'
+let g:netrw_dirhist_8='/Users/dongmyeong/projects/wecode/22-Westagram-backend/students/dongmyeong/westagram'
+let g:netrw_dirhist_7='/Users/dongmyeong/projects/wecode/22-Westagram-backend/students/dongmyeong/users'
