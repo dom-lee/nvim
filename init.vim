@@ -127,8 +127,8 @@ Plug 'dyng/ctrlsf.vim' "여러 파일 동시에 수정
 
 Plug 'schickling/vim-bufonly' "현재 버퍼뺴고 모든 버퍼 삭제
 Plug 'sjl/gundo.vim' "수정 되돌리기 트리
- 
-Plug 'iamcco/markdown-preview.nvim'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
