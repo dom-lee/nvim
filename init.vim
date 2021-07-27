@@ -31,6 +31,8 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+set encoding=utf-8
+
 "================================= Tap & Space ======================================
 nmap <leader>l <Esc>:set list!<CR>
 highlight SpecialKey cterm=None ctermfg=grey
@@ -82,6 +84,7 @@ autocmd FileType py setlocal sw=4 ts=4
 "-- plugins
 "----------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
+Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-easy-align'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvie/vim-flake8'
@@ -132,6 +135,11 @@ Plug 'sjl/gundo.vim' "수정 되돌리기 트리
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'nathanaelkane/vim-indent-guides'
+
+" Coc.nvim and yarn
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
 call plug#end()
 
 " Plugins setting
@@ -163,8 +171,8 @@ let g:ycm_complete_in_strings = 1 " Completion in string
 "coc nvim
 let g:python3_host_prog="/Users/dongmyeong/opt/miniconda3/bin/python"
 
-"let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-tsserver', 'coc-import-cost', 'coc-eslint', 'coc-snippets', 'coc-html', 'coc-css', 'coc-emmet', 'coc-pyright', 'coc-phpls', 'coc-angular', 'coc-git']
-"let g:coc_global_extensions += ['https://github.com/andys8/vscode-jest-snippets']
+let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-tsserver', 'coc-import-cost', 'coc-eslint', 'coc-snippets', 'coc-html', 'coc-css', 'coc-emmet', 'coc-pyright', 'coc-phpls', 'coc-angular', 'coc-git']
+let g:coc_global_extensions += ['https://github.com/andys8/vscode-jest-snippets']
 
 " vim-airline
 """"""""""""""""""""""""""""""""""
