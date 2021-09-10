@@ -31,8 +31,6 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
-set encoding=utf-8
-
 "================================= Tap & Space ======================================
 nmap <leader>l <Esc>:set list!<CR>
 highlight SpecialKey cterm=None ctermfg=grey
