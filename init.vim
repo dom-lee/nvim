@@ -167,7 +167,7 @@ let g:ycm_complete_in_comments = 1 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
 
 "coc nvim
-let g:python3_host_prog="/Users/dongmyeong/opt/miniconda3/bin/python"
+let g:python3_host_prog="/Users/dongmyeong/miniconda3/bin/python"
 
 let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-tsserver', 'coc-import-cost', 'coc-eslint', 'coc-snippets', 'coc-html', 'coc-css', 'coc-emmet', 'coc-pyright', 'coc-phpls', 'coc-angular', 'coc-git']
 let g:coc_global_extensions += ['https://github.com/andys8/vscode-jest-snippets']

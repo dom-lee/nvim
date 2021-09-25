@@ -35,3 +35,15 @@ Python3_host_prog = /Users/<사용자경로>/opt/miniconda/bin/python
 
 `:PlugInstall` 타이핑
 
+## 9. Yarn 설치
+`brew install yarn`
+
+## 10. coc.nvim 설정
+```
+cd ~/.config/nvim/plugged/coc.nvim/
+yarn install
+yarn build
+```
+
+
+
