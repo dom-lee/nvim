@@ -7,13 +7,13 @@ set hlsearch                    "highlight searching result
 set ignorecase                  "ignore Case sensitive when searching
 set showmatch                   "highlight matched bracket ()
 
-"================================= Optional setting =================================
+"============================ Optional setting ===============================
                                 "Highly recommended
 set history=1000                "store :cmd history
 set title                       "change the terminal title
 set cursorline                  "highlight cursor line
 set mouse=h                     "Enable mouse in help mode
-                               "'a' to all mode, n, v, i, c to Normal, Visual, Insert, Command mode
+                                 "'a' to all mode, n, v, i, c to Normal, Visual, Insert, Command mode
 set wrap
 
 syntax sync minlines=200        "For speed up vim
@@ -24,13 +24,7 @@ set noswapfile
 set nobackup
 set nowb
 
-" Indentation
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-
+set colorcolumn=80
 "================================= Tap & Space ======================================
 nmap <leader>l <Esc>:set list!<CR>
 highlight SpecialKey cterm=None ctermfg=grey
@@ -43,11 +37,11 @@ set listchars+=precedes:«
 set listchars+=nbsp:·
 set listchars+=space:·
 set fillchars+=vert:\│          "Make vertical split separator full line
-set autoindent
 set cindent
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set title
 set wrap
 set linebreak
@@ -69,15 +63,32 @@ silent !mkdir ~/.config/nvim/backups > /dev/null 2>&1
 set undodir=~/.config/nvim/backups
 set undofile
 
-" ================================ Auto command ===================================
+" ================================ Auto command ===============================
 
-autocmd InsertEnter * :set nocul                  "Remove cursorline highlight
-autocmd InsertLeave * :set cul                    "Add cursorline highlight in normal mode
+autocmd InsertEnter * :set nocul                    "Remove cursorline highlight
+autocmd InsertLeave * :set cul                      "Add cursorline highlight in normal mode
 autocmd FileType html setlocal sw=2 ts=2 "Set indentation to 4 for html, css, scss, js
 autocmd FileType css setlocal sw=2 ts=2
 autocmd FileType scss setlocal sw=2 ts=2
 autocmd FileType js setlocal sw=2 ts=2
 autocmd FileType py setlocal sw=4 ts=4
+
+
+
+" ==========================  Go to tab by number ============================
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 "----------------------------------------------------------------------------------
 "-- plugins
 "----------------------------------------------------------------------------------
@@ -167,7 +178,7 @@ let g:ycm_complete_in_comments = 1 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
 
 "coc nvim
-let g:python3_host_prog="/Users/dongmyeong/miniconda3/bin/python"
+let g:python3_host_prog="/home/dongmyeong/miniconda3/bin/python"
 
 let g:coc_global_extensions = ['coc-explorer', 'coc-json', 'coc-tsserver', 'coc-import-cost', 'coc-eslint', 'coc-snippets', 'coc-html', 'coc-css', 'coc-emmet', 'coc-pyright', 'coc-phpls', 'coc-angular', 'coc-git']
 let g:coc_global_extensions += ['https://github.com/andys8/vscode-jest-snippets']
@@ -187,10 +198,10 @@ colorscheme onedark
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 if (empty($TMUX))
-  if (has("nvim"))
+    if (has("nvim"))
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
+    endif
+    if (has("termguicolors"))
     set termguicolors
-  endif
+    endif
 endif
