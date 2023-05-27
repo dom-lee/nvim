@@ -90,9 +90,3 @@ let g:vimtex_compiler_method = 'latexmk'
 let maplocalleader = ","
 
 let g:vimtex_syntax_conceal_disable = 1
-
-" YouCompleteMe for Vimtex
-if !exists('g:ycm_semantic_triggers')
-  let g:ycm_semantic_triggers = {}
-endif
-au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
