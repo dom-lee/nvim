@@ -15,6 +15,9 @@ set textwidth=80
 set colorcolumn=+1
 :hi ColorColumn ctermbg=235 guibg=lightgrey
 
+set wrap
+set linebreak
+
 " ================ Tab & Space =================================================
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
@@ -42,23 +45,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
 " vertical lines at indentation
 Plug 'Yggdroot/indentLine'
-" coc-nvim
+" Autocompletion coc-nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-""" Auto Completion
-Plug 'wbthomason/packer.nvim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-" Initialize plugin system
+"" Initialize plugin system
 call plug#end()
-
-luafile ~/.config/nvim/lua/lsp.lua
-luafile ~/.config/nvim/lua/nvim-cmp.lua
 
 " ================ Plug-In Key Map =============================================
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -99,4 +89,10 @@ let g:vimtex_compiler_method = 'latexmk'
 " following line. The default is usually fine and is the symbol "\".
 let maplocalleader = ","
 
-let g:vimtex_compiler_progname = 'nvr'
+let g:vimtex_syntax_conceal_disable = 1
+
+" YouCompleteMe for Vimtex
+if !exists('g:ycm_semantic_triggers')
+  let g:ycm_semantic_triggers = {}
+endif
+au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
