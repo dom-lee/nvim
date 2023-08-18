@@ -10,18 +10,18 @@ set hlsearch
 set ignorecase
 set nowrap
 
-" ================ TextWidth & Column Ruler ====================================
-set textwidth=80
-set colorcolumn=+1
+" ================ TextWidth & Column Ruler ============================
+set textwidth=79
+set colorcolumn=73,80
 :hi ColorColumn ctermbg=235 guibg=lightgrey
 
 set wrap
 set linebreak
 
-" ================ Tab & Space =================================================
+" ================ Tab & Space =========================================
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
-" ================ Plug-In =====================================================
+" ================ Plug-In =============================================
 call plug#begin('~/.config/nvim/plugged')
 " vimtex
 Plug 'lervag/vimtex'
