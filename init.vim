@@ -8,11 +8,10 @@ syntax on
 set number
 set hlsearch
 set ignorecase
-set nowrap
 
 " ================ TextWidth & Column Ruler ============================
-set textwidth=79
-set colorcolumn=73,80
+set textwidth=0
+set colorcolumn=80
 :hi ColorColumn ctermbg=235 guibg=lightgrey
 
 set wrap
